@@ -6,7 +6,62 @@
     <title>Document</title>
 </head>
 
+    
 <body>
     
+    <div id="shoppingCart" onclick="openAndClose()"><!-- Dette er div'en som skal kunne åpnes og lukkes. Må få lagt inn et 
+        bilde av en handlekurv som vi skal kunne trykke på -->
+        <div id="basketInventory">Denne div'en skal inneholde maten vi velger</div>
+    </div>
+       <!-- Inneholder maten som kan kjøpes
+        trenger 3+ knapper evt "+ og -" fokuser butikk og knapper for varer 
+         -->
+    <div id="myShop">
+        <div id="pizza" onclick="addPizza()">🍕</div>
+        <div id="burger" onclick="addBurger()">🍔</div>
+        <div id="fries" onclick="addFries()">🍟</div>
+        <div id="soda" onclick="addSoda()">🥤</div>
+    </div> 
+    <button onclick="addItem('Add')">add</button>
+    <button onclick="RemoveItem('Remove')">remove</button>
+    
+        
+    
+     
+
+<script>
+    let tempShoppingCartItem = ""
+
+    function addPPizza(){
+        tempShoppingCartItem = document.getElementById('pizza').innerHTML
+    }
+
+    // document.getElementById('basketInventory').innerHTML += tempShoppingCartItem
+
+    let open = false
+
+    function openAndClose() {
+        if(open){
+            document.getElementById("basketInventory").style.display = "none"
+        }
+        else {
+            document.getElementById("basketInventory").style.display = "flex"
+        } 
+        open = !open;  
+    }
+    
+    function addItem(elem) {
+        console.log(elem.innerHTML)
+        document.getElementById("myShop").innerHTML
+
+        }
+
+    function RemoveItem(elem) {
+        document.getElementById("myShop").innerHTML
+
+    }
+
+</script>
+
 </body>
 </html>
