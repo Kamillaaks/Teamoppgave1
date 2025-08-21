@@ -9,10 +9,11 @@
     
 <body>
     
-    <div id="shoppingCart" onclick="openAndClose()"><!-- Dette er div'en som skal kunne åpnes og lukkes. Må få lagt inn et 
+    <div id="shoppingCart"><!-- Dette er div'en som skal kunne åpnes og lukkes. Må få lagt inn et 
         bilde av en handlekurv som vi skal kunne trykke på -->
         <div id="basketInventory">Denne div'en skal inneholde maten vi velger</div>
     </div>
+    <button id="cartButton" onclick="openAndClose()">Lukk</button>
        <!-- Inneholder maten som kan kjøpes
         trenger 3+ knapper evt "+ og -" fokuser butikk og knapper for varer 
          -->
@@ -31,30 +32,30 @@
 
 <script>
     let tempShoppingCartItem = ""
+    let open = true
 
-    function addPPizza(){
+    function addPizza(){
         tempShoppingCartItem = document.getElementById('pizza').innerHTML
+        console.log(tempShoppingCartItem)
     }
 
     // document.getElementById('basketInventory').innerHTML += tempShoppingCartItem
 
-    let open = false
-
     function openAndClose() {
-        if(open){
+        if(open) {
             document.getElementById("basketInventory").style.display = "none"
+            document.getElementById("cartButton").innerHTML = "Åpne" 
         }
         else {
             document.getElementById("basketInventory").style.display = "flex"
+            document.getElementById("cartButton").innerHTML = "Lukk"
         } 
         open = !open;  
     }
-    
-    function addItem(elem) {
-        console.log(elem.innerHTML)
-        document.getElementById("myShop").innerHTML
 
-        }
+    function addItem(elem) {
+        document.getElementById("myShop").innerHTML
+    }
 
     function RemoveItem(elem) {
         document.getElementById("myShop").innerHTML
