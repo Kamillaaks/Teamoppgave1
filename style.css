@@ -1,28 +1,46 @@
-.highlightColor{
-    color: rgb(255, 149, 0);
-}
-.h1.highlightColor{
-    background-color: #00ffff35; 
+body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;       
+  justify-content: center;   
+  min-height: 100vh;         
+  margin: 0;
+  background-color: #f0f0f0; 
 }
 
-#undertxt{
-    color: rgb(255, 0, 0);
+.box {
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  margin: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  text-align: center;
 }
 
-.section div{
-    background-color: rgb(178, 189, 185);
-    padding: 5%;
-    margin: 2%;
-    border: 2px solid black;
-    border-radius: 2em;
-    height: 200px;
-    width: 400px;
-    pointer-events:
-}
-        
-.section{
+.food {
     display: flex;
-    flex-direction: column;        
-    justify-content:  center;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+}
+#basketInventory {
+  background-color: #e0e0e0; 
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+#shoppingCart img {
+  display: block;
+  margin: 0 auto 10px auto;  
+}
+
+#myShop {
+  justify-content: flex-start;
+  margin-bottom:10px;
 }

@@ -9,21 +9,25 @@
 
 <body>
     
-    <div id="shoppingCart"><!-- Dette er div'en som skal kunne åpnes og lukkes. Må få lagt inn et 
+    <div id="shoppingCart" class="box"><!-- Dette er div'en som skal kunne åpnes og lukkes. Må få lagt inn et 
         bilde av en handlekurv som vi skal kunne trykke på -->
         <div id="basketInventory"></div>
-    </div>
-    <img src="Shoppingcart2.png" width="80">
+            <img src="Shoppingcart2.png" width="80">
     <button id="cartButton" onclick="openAndClose()">Lukk</button>
+    </div>
+
        <!-- Inneholder maten som kan kjøpes
         trenger 3+ knapper evt "+ og -" fokuser butikk og knapper for varer -->
-    <div id="myShop">
-        <div id="pizza" onclick="addPizza()">🍕</div>
-        <div id="burger" onclick="addBurger()">🍔</div>
-        <div id="fries" onclick="addFries()">🍟</div>
-        <div id="soda" onclick="addSoda()">🥤</div>
+    <div id="myShop" class="box">
+        <h2>Team 1's grill</h2>
+        <div class="food">
+            <div id="pizza" onclick="addPizza()">🍕</div>
+            <div id="burger" onclick="addBurger()">🍔</div>
+            <div id="fries" onclick="addFries()">🍟</div>
+            <div id="soda" onclick="addSoda()">🥤</div>
+        </div>
+        <button onclick="addItem('Add')">add</button>
     </div> 
-    <button onclick="addItem('Add')">add</button>
 
 <script>
     let tempShoppingCartItem = ""
