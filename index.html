@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-    
 <body>
     
     <div id="shoppingCart"><!-- Dette er div'en som skal kunne åpnes og lukkes. Må få lagt inn et 
         bilde av en handlekurv som vi skal kunne trykke på -->
-        <div id="basketInventory">Denne div'en skal inneholde maten vi velger</div>
+        <div id="basketInventory"></div>
     </div>
+    <img src="Shoppingcart2.png" width="80">
     <button id="cartButton" onclick="openAndClose()">Lukk</button>
        <!-- Inneholder maten som kan kjøpes
         trenger 3+ knapper evt "+ og -" fokuser butikk og knapper for varer 
@@ -24,11 +25,6 @@
         <div id="soda" onclick="addSoda()">🥤</div>
     </div> 
     <button onclick="addItem('Add')">add</button>
-    <button onclick="RemoveItem('Remove')">remove</button>
-    
-        
-    
-     
 
 <script>
     let tempShoppingCartItem = ""
@@ -36,10 +32,19 @@
 
     function addPizza(){
         tempShoppingCartItem = document.getElementById('pizza').innerHTML
-        console.log(tempShoppingCartItem)
     }
 
-    // document.getElementById('basketInventory').innerHTML += tempShoppingCartItem
+     function addBurger(){
+        tempShoppingCartItem = document.getElementById('burger').innerHTML
+    }
+
+     function addFries(){
+        tempShoppingCartItem = document.getElementById('fries').innerHTML
+    }
+
+     function addSoda(){
+        tempShoppingCartItem = document.getElementById('soda').innerHTML
+    }
 
     function openAndClose() {
         if(open) {
@@ -55,11 +60,7 @@
 
     function addItem(elem) {
         document.getElementById("myShop").innerHTML
-    }
-
-    function RemoveItem(elem) {
-        document.getElementById("myShop").innerHTML
-
+        document.getElementById('basketInventory').innerHTML += tempShoppingCartItem
     }
 
 </script>

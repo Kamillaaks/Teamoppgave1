@@ -1,0 +1,28 @@
+.highlightColor{
+    color: rgb(255, 149, 0);
+}
+.h1.highlightColor{
+    background-color: #00ffff35; 
+}
+
+#undertxt{
+    color: rgb(255, 0, 0);
+}
+
+.section div{
+    background-color: rgb(178, 189, 185);
+    padding: 5%;
+    margin: 2%;
+    border: 2px solid black;
+    border-radius: 2em;
+    height: 200px;
+    width: 400px;
+    pointer-events:
+}
+        
+.section{
+    display: flex;
+    flex-direction: column;        
+    justify-content:  center;
+    align-items: center;
+}
